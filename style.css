@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game-container{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center center, #033432 0%, #0a2201 50%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.container-sub{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-main{
+    display: flex;
+    gap: 50px;
+}
+
+.grid{
+    width: 300px;
+    height: 600px;
+    background: linear-gradient(180deg, #a78b00, #5b9f02, #027e42);
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #156d08;
+}
+
+.grid div{
+    height: 30px;
+    width: 30px;
+}
+
+.lTetromino{
+    background-color: #0000ff;
+}
+.zTetromino{
+    background-color: #ff0000;
+}
+.tTetromino{
+    background-color: #ff00dd;
+}
+.oTetromino{
+    background-color: #00ffe5;
+}
+.iTetromino{
+    background-color: #ddff00;
+}
+
+.mini-grid{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(180deg, #a78b00, #5b9f02, #027e42);
+    margin: 120px 0 0 20px;
+    border: 2px solid rgb(21, 109, 8);
+}
+
+.mini-grid div{
+    width: 30px;
+    height: 30px;
+}
+
+.score{
+    background-color: #07d768;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 4px solid #156d08;
+}
+
+#start-button{
+    padding: 5px 15px;
+    background-color: #07d768;
+    color: #031202;
+    font-size: 20px;
+    font-family: monospace;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #156d08;
+}
+
+#start-button:hover{
+    background-color: #06ac53;
+}
+
+#start-button:active{
+    background-color: #03450c;
+    color: rgb(7, 215, 104);
+}
+
+.paused{
+    display: none;
+    position: absolute;
+    left: 35.3%;
+    top: 42%;
+    font-family: monospace;
+    font-size: 80px;
+    font-style: oblique;
+    color: #e80000;
+    background: linear-gradient(45deg,#000000, #163002, #3a022b, #033432, #000);
+    border-radius: 50%;
+    padding: 40px 140px;
+    box-shadow: 0px 0px 20px 1px rgb(75, 10, 10);
+}
+
+.gameOverContainer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.gameOver{
+    font-family: monospace;
+    font-size: 60px;
+    letter-spacing: 5px;
+    display: grid;
+    width: 100vw;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    color: #e80000;
+    background: linear-gradient(45deg,#000000, #163002, #3a022b, #033432, #000);
+    box-shadow: 0px 0px 20px 1px rgb(75, 10, 10);
+}
